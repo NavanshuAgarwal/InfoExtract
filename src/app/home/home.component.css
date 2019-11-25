@@ -1,0 +1,50 @@
+mat-grid-tile {
+    background: #343A40;
+    padding: 5px;
+    font-size: 28px;
+    color:#8c989c;
+    font-variant-caps: all-small-caps;
+    margin-right:10px;
+    
+  }
+  
+mat-grid-tile:hover {
+    background:#70C989;
+    color: white; 
+}
+
+#LibraryTile {
+    background: #343A40;
+    padding: 5px;
+    font-size: 28px;
+    color:#8c989c;
+    font-variant-caps: all-small-caps;
+    margin-right:10px;
+
+    background-image: url("../../assets/LibraryTileIconGreen.png");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    height: 200px;
+    width: auto;
+    background-position: center; 
+}
+
+#TrainTile:hover {
+    
+    background-color: #da3114;
+}
+
+#ExtractTile:hover {
+background-color:  #f3bd01;
+}
+
+#LibraryTile:hover {
+    /* background-image: url("../../assets/Library2.gif");
+    background-repeat: no-repeat;
+    background-size: 100px;
+    border: 10px solid #1f6dc7;
+    height: 250px;
+    width: auto; 
+    background-position: center; */
+    background-color: #1f6dc7; 
+}
