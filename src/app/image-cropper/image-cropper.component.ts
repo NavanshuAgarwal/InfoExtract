@@ -103,6 +103,13 @@ export class ImageCropperComponent implements OnInit, AfterViewInit {
     }
 
     addtoImgList(){
+      const REGEXP = /[$&+,:;=@#|'<>.^*()%!-]/ ;
+          if (REGEXP.test(this.imageDetails.ImageName)) 
+          {
+            alert("Special Characters are not allowed in Entity Name");
+            return null;
+          } 
+
         this.imageDetails.ImageDataURL = this.imageDestination;
         this.imageDetails.ImgH = this.imgHeight;
         this.imageDetails.ImgW = this.imgWidth;

@@ -37,6 +37,7 @@ import { ImageCropperComponent } from './image-cropper/image-cropper.component';
 import { TemplatePreviewComponent } from './template-preview/template-preview.component';
 import { MarkedImagesComponent } from './marked-images/marked-images.component';
 import { FilePreViewComponent } from './file-pre-view/file-pre-view.component';
+import { TemplateTilesComponent } from './template-tiles/template-tiles.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { FilePreViewComponent } from './file-pre-view/file-pre-view.component';
     TemplatePreviewComponent,
     MarkedImagesComponent,
     FilePreViewComponent,
+    TemplateTilesComponent,
   ],
   imports: [
     BrowserModule,

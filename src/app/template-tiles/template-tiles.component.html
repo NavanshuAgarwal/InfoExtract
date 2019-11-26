@@ -1,0 +1,8 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <a>
+        <mat-grid-tile (click)="TestFunction()"
+            *ngFor="let tile of data">
+          {{tile.name}}
+        </mat-grid-tile>
+    </a>
+      </mat-grid-list>

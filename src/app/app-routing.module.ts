@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UploadListComponent } from './upload-list/upload-list.component';
 import { TrainingInformationComponent } from './training-information/training-information.component';
 import { MarkedImagesComponent } from './marked-images/marked-images.component';
+import { TemplateTilesComponent } from './template-tiles/template-tiles.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'train', component: TrainingModuleComponent },
   { path: 'extract', component: ExtractionModuleComponent },
   { path:'training-information',component : TrainingInformationComponent },
+  { path:'library',component : TemplateTilesComponent },
   { path: '**', component: PageNotFoundComponent }
   ];
 

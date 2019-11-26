@@ -22,3 +22,13 @@ body {
 .matIcon {
   color: #70C989;
 }
+
+.navbar-brand {
+  padding-top: .0005rem;
+  padding-bottom: .6125rem;
+}
+
+::ng-deep .navbar-brand {
+  padding-top: .0005rem;
+  padding-bottom: .6125rem;
+}
