@@ -38,6 +38,7 @@ import { TemplatePreviewComponent } from './template-preview/template-preview.co
 import { MarkedImagesComponent } from './marked-images/marked-images.component';
 import { FilePreViewComponent } from './file-pre-view/file-pre-view.component';
 import { TemplateTilesComponent } from './template-tiles/template-tiles.component';
+import { TemplateDetailsComponent } from './template-details/template-details.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { TemplateTilesComponent } from './template-tiles/template-tiles.componen
     MarkedImagesComponent,
     FilePreViewComponent,
     TemplateTilesComponent,
+    TemplateDetailsComponent,
   ],
   imports: [
     BrowserModule,

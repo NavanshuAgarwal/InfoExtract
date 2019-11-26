@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LibraryDataService } from '../library-data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-template-tiles',
@@ -7,27 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateTilesComponent implements OnInit {
 
-  data:Array<Object> = [
-    {id: 0, name: "AmeriHome"},
-    {id: 1, name: "BoA"},
-    {id: 2, name: "Caliber"},
-    {id: 3, name: "Chase"},
-    {id: 4, name: "Cenlar"},
-    {id: 5, name: "Wells Fargo"},
-    {id: 6, name: "Arvest Central Mortgage"},
-    {id: 7, name: "BoA HELOC"},
-    {id: 8, name: "BBVA Compass"},
-    {id: 9, name: "Freedom Mortgage"},
-    {id: 10, name: "Ditech"},
-    {id: 11, name: "Dovenmuhle"},
-  ];
-  constructor() { }
-
-  ngOnInit() {
+  showSpinner: boolean;
+  data: string[];
+  myJson =  {
+    "FileType" : ""
+  }
+  constructor(
+              private libraryService : LibraryDataService,
+              private httpClient : HttpClient
+  ) {
+    this.showSpinner = false;
   }
 
-  TestFunction()
-  {
-    alert("hi");
+  ngOnInit() {
+    this.data =  this.libraryService.templateList["trainedTemplatesList"];
+  }
+
+  TestFunction(fileType) {
+    this.showSpinner = true;
+    this.libraryService.fileType = fileType;
+    this.myJson = {
+      "FileType" : fileType
+    }
+    this.httpClient.post("http://172.23.114.23:5000/api/TemplateDetails ",this.myJson).subscribe(
+      (data:any) =>
+      {
+      this.libraryService.extractedInformation = data["Info"];
+      
+      }
+      
+    );
   }
 }
