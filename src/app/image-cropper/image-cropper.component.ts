@@ -102,13 +102,14 @@ export class ImageCropperComponent implements OnInit, AfterViewInit {
 
     }
 
+      
     addtoImgList(){
-      const REGEXP = /[$&+,:;=@#|'<>.^*()%!-]/ ;
-          if (REGEXP.test(this.imageDetails.ImageName)) 
-          {
-            alert("Special Characters are not allowed in Entity Name");
-            return null;
-          } 
+      // const REGEXP = /[$&+,:;=@#|'<>.^*()%!-]/ ;
+      //     if (REGEXP.test(this.imageDetails.ImageName)) 
+      //     {
+      //       alert("Special Characters are not allowed in Entity Name");
+      //       return null;
+      //     } 
 
         this.imageDetails.ImageDataURL = this.imageDestination;
         this.imageDetails.ImgH = this.imgHeight;
@@ -217,4 +218,11 @@ export class ImageCropperComponent implements OnInit, AfterViewInit {
     }
 
   }
+
+  omit_special_char(event)
+    {   
+      var k;  
+      k = event.charCode;  //         k = event.keyCode;  (Both can be used)
+      return((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57)); 
+    } 
 }

@@ -41,7 +41,7 @@
                 <div>
 
                     <mat-label>Entity Name: </mat-label> &nbsp;
-                    <input placeholder="Enter Entity Name"  [(ngModel)] = "imageDetails.ImageName"> &nbsp;
+                    <input (keypress)="omit_special_char($event)" placeholder="Enter Entity Name"  [(ngModel)] = "imageDetails.ImageName"> &nbsp;
                     <!-- <button mat-mini-fab (click)="addtoImgList()" color="add"> -->
                     <button mat-mini-fab (click)="addtoImgList()" class="matButton3">
                             <mat-icon class="matUtilityIcon" aria-hidden="false" aria-label="Example add icon" >add</mat-icon>        
